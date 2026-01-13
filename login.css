@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+/* NAVIGATOR - TOP LEFT */
+#navigator {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+#back {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#back:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* MAIN CONTENT SECTION */
+#body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: url('login.jpg') no-repeat center/cover;
+  position: relative;
+}
+
+/* HEADER ABOVE FORM */
+#body h1 {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+/* FORM BOX */
+.form-box {
+  width: 400px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.304);
+  border-radius: 60px;
+  color: #fff;
+  backdrop-filter: blur(2px);
+  margin-top: 80px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* INPUTS */
+.inputbox {
+  position: relative;
+  margin: 25px 0;
+  border-bottom: 2px solid #fff;
+}
+
+.inputbox label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #e7ac0b;
+  font-size: 1em;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+.inputbox input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1em;
+  padding: 0 35px 0 5px;
+}
+
+.inputbox ion-icon {
+  position: absolute;
+  right: 8px;
+  color: #fff;
+  font-size: 1.2em;
+  top: 15px;
+}
+
+/* FLOAT LABEL */
+.inputbox input:focus ~ label,
+.inputbox input:not(:placeholder-shown) ~ label {
+  top: -5px;
+  font-size: 0.85em;
+  color: #03e9f4;
+}
+
+.forget {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em;
+  margin: 10px 0 20px;
+}
+
+.forget label, 
+.forget a {
+  color: #fff;
+}
+
+.forget a:hover {
+  text-decoration: underline;
+}
+
+/* LOGIN BUTTON */
+button[type="submit"] {
+  width: 100%;
+  height: 45px;
+  border-radius: 25px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  color: #333;
+  transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #0e8edd;
+  color: #000;
+}
+
+/* REGISTER LINK */
+.register {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.register a {
+  color: #f4034f;
+  text-decoration: none;
+}
+
+.register a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 12px 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 0.9rem;
+  backdrop-filter: blur(2px);
+}

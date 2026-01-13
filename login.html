@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Mera Engineering</title>
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            /* Using a background color fallback in case image isn't found */
+            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("real_estate.webp");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Navigation Container - Changed from Section to Div */
+        .nav-container {
+            padding: 20px;
+        }
+
+        .back-btn {
+            background: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+            display: inline-block;
+            transition: 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .back-btn:hover {
+            background: #0087b4;
+            color: white;
+        }
+
+        /* Login Area - Changed from Section to Div */
+        .login-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .login-wrapper h1 {
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            text-align: center;
+        }
+
+        .form-box {
+            width: 100%;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .form-box h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .staff-label {
+            text-align: center;
+            display: block;
+            margin-bottom: 25px;
+            color: #666;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .inputbox {
+            margin-bottom: 20px;
+        }
+
+        .inputbox label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .inputbox input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline-color: #0087b4;
+        }
+
+        .forget {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            margin-bottom: 25px;
+        }
+
+        .forget a {
+            color: #0087b4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 14px;
+            background: #0087b4;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background: #b245f1;
+        }
+
+        .register {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 0.9rem;
+        }
+
+        .register a {
+            color: #0087b4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-container">
+        <a href="homepage.html" class="back-btn">← Back to Home</a>
+    </div>
+  
+    <div class="login-wrapper">
+        <h1>Mera Engineering &trade;</h1>
+
+        <div class="form-box">
+            <form action="login.php" method="POST">
+                <h2>Welcome Back</h2>
+                <span class="staff-label">Staff Only Access</span>
+
+                <div class="inputbox">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="inputbox">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="forget">
+                    <label><input type="checkbox" name="remember"> Remember Me</label>
+                    <a href="https://accounts.google.com/signin/recovery">Forgot password?</a>
+                </div>
+
+                <button type="submit">Log In</button>
+
+                <div class="register">
+                    <p>New employee? <a href="#">Register here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+  
+    <footer>
+        &copy; 2026 Mera Engineering &trade; | All Rights Reserved.
+    </footer>
+
+</body>
+</html>
