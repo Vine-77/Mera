@@ -128,7 +128,7 @@
         button[type="submit"] {
             width: 100%;
             padding: 14px;
-            background: #0087b4;
+            background: #0057b4;
             color: white;
             border: none;
             border-radius: 30px;
@@ -139,7 +139,7 @@
         }
 
         button[type="submit"]:hover {
-            background: #b245f1;
+            background: #1e83ff;
         }
 
         .register {
@@ -152,6 +152,26 @@
             color: #0087b4;
             text-decoration: none;
             font-weight: bold;
+        }
+        #reset {
+            width: 20%;
+            padding: 5px;
+            background: #38eeffa6;
+            color: #333;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1.0rem;
+            transition: 0.23s;
+        }
+        #reset:hover {
+            background: #40baf2;
+        }
+        video{
+            display: block;
+            margin: 0 auto 20px auto;
+            border-radius: 10px;
         }
 
         /* Footer */
@@ -185,18 +205,25 @@
 
                 <div class="inputbox">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
+                    <input type="password" id="password" name="password" pattern="[a-zA-Z]{8}">
                 </div>
 
                 <div class="forget">
                     <label><input type="checkbox" name="remember"> Remember Me</label>
                     <a href="https://accounts.google.com/signin/recovery">Forgot password?</a>
                 </div>
-
-                <button type="submit">Log In</button>
+                <br>
+                <video width="300" height="200" controls>
+                    <source src="A$AP Rocky - Praise The Lord (Lyrics) Feat. Skepta.mp4">
+                </video>
+                <br>
+                <iframe width="300" height="250" src="https://www.youtube.com/embed/c5-K9rIkPbI"></iframe>
+                <input type="reset" name="reset" id="reset" value="Clear"><br> <br>
+                <button type="submit">Log In</button> <br> <br>
 
                 <div class="register">
                     <p>New employee? <a href="#">Register here</a></p>
+                    <p>The &lt;div&gt; same as &hearts; aswell as &copy; with &numero;, all these &larr; tags are entities</p>
                 </div>
             </form>
         </div>
