@@ -24,6 +24,18 @@
         h1, h2, h3, h4 {
             margin: 0.5em 0;
         }
+        h1.glow-heading {
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            /* Layer 1-2: White core | Layer 3-5: Colored aura */
+            text-shadow: 
+                0 0 7px #fff,
+                0 0 10px #fff,
+                0 0 21px #00d4ff,
+                0 0 42px #00d4ff,
+                0 0 82px #00d4ff;
+        }
         p {
             margin: 0.5em 0 1em 0;
         }
@@ -66,10 +78,14 @@
             margin: 0 auto;
         }
         #span{
-            color: rgb(173, 61, 24);
+            color: rgb(23, 0, 123);
+            font-family: 'Dress Combo Four', cursive;
+        }
+        #top{
+            color: rgb(60, 177, 6);
         }
         #spanII{
-            color: rgb(218, 28, 28)
+            color: rgb(221, 132, 15);
         }
         #intro {
             text-align: center;
@@ -132,6 +148,7 @@
         /* Samples - Clean Responsive Gallery */
         #samples {
             text-align: center;
+             background: linear-gradient(to bottom, rgb(255, 214, 138), rgb(215, 215, 215), rgb(255, 214, 138));
         }
         #samples .samples-grid {
             display: grid;
@@ -143,9 +160,11 @@
         #samples img {
             border-radius: 16px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-            transition: transform 0.4s ease;
+            transition: transform 0.2s ease;
             height: 240px;
+            width: 300px;
             object-fit: cover;
+            background-color: brown;
         }
         #samples img:hover {
             transform: scale(1.05);
@@ -258,30 +277,30 @@
 
         /* Sub Footer */
         #sub-footer {
-    background: #fefbf7;
-    padding: 60px 20px;
-    line-height: 2;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+            background: #fefbf7;
+            padding: 60px 20px;
+            line-height: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-#sub-footer p,
-#sub-footer h2,
-#sub-footer h3,
-#sub-footer h4 {
-    text-align: left;
-    margin-bottom: 10px;
-}
+        #sub-footer p,
+        #sub-footer h2,
+        #sub-footer h3,
+        #sub-footer h4 {
+             text-align: left;
+             margin-bottom: 10px;
+        }
 
-#sub-footer ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0 0 20px 0;
-}
+        #sub-footer ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0 0 20px 0;
+        }
 
-#sub-footer li {
-    text-align: left;
-}
+        #sub-footer li {
+            text-align: left;
+        }
 
 
         /* Footer */
@@ -298,7 +317,7 @@
             z-index: 99;
             transform: translateY(100%);
             transition: transform 0.4s ease-in-out;
-}
+        }
 
         #links a {
             margin: 0 12px;
@@ -329,35 +348,50 @@
             #contact { padding: 35px; }
         }
         #submission button {
-    display: block;
-    margin: 20px auto;       /* centers the button */
-    width: 160px;            /* adjust width */
-    height: 45px;
-    border-radius: 25px;
-    background-color: #fff;
-    color: #333;
-    font-weight: 600;
-    font-size: 1em;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-}
+            display: block;
+            margin: 20px auto;       /* centers the button */
+            width: 160px;            /* adjust width */
+            height: 45px;
+            border-radius: 25px;
+            background-color: #fff;
+            color: #333;
+            font-weight: 600;
+            font-size: 1em;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
 
-#submission button:hover {
-    background-color: #0069ab;
-    color: #fff;
-    transform: scale(1.05);
-}
-.head {
-    color: rgb(3, 0, 85);
-    font-size: x-large;
-}
+        #submission button:hover {
+            background-color: #0069ab;
+            color: #fff;
+            transform: scale(1.05);
+        }
+        .head {
+            color: rgb(3, 0, 85);
+            font-size: x-large;
+        }
 
-        
+        /* Target you.png image specifically */
+        #you img{
+            width: 140px;
+            height: 100px;
+            align-items: end;
+            display: block;
+            margin-top: 40px;
+            /* Expansion Effect */
+            animation: pulse-effect 4s infinite ease-in-out;
+        }
+
+        /* Expansion/Contraction Keyframes */
+        @keyframes pulse-effect {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
     </style>
 </head>
 <body>
-
     <header class="navbar">
         <nav>
             <a href="#about">About us</a>
@@ -369,14 +403,13 @@
 
     <section id="intro">
         <h1 class="head">Mera <span id = "spanII">Engineering Agency&trade;</span></h1>
-         ️
-        <h1><strong><span id="span">The Top Real</span> Estate & Construction company in Rwanda</strong></h1>
-        <p><strong>At Mera Engineering, we are committed to transforming your architectural visions into reality. As a trusted leader in Rwanda’s construction and real estate industry, we pride ourselves on delivering top-notch engineering solutions and building projects that reflect quality, innovation, and sustainable development.</strong></p>
-        <h2>Mission</h2>
-        <p>“To drive progress through innovative and sustainable engineering, turning ideas into reliable solutions that empower communities and businesses.”</p>
     </section>
+    <h1><strong><span id="span">The <span id="top">Top</span> RealEstate & Construction company in Rwanda</span></strong></h1>
 
     <section id="about">
+         <p><strong>At Mera Engineering, we are committed to transforming your architectural visions into reality. As a trusted leader in Rwanda’s construction and real estate industry, we pride ourselves on delivering top-notch engineering solutions and building projects that reflect quality, innovation, and sustainable development.</strong></p>
+        <h2>Mission</h2>
+        <p>“To drive progress through innovative and sustainable engineering, turning ideas into reliable solutions that empower communities and businesses.”</p>
         <h2>About us</h2>
         <h4>Who we are:</h4>
         <p>"We are a Rwandan engineering company committed to delivering innovative and sustainable solutions that drive progress across industries. With local expertise and a global perspective, we turn ideas into impactful projects that shape Rwanda’s future."</p>
@@ -404,14 +437,17 @@
     <section id="samples">
         <h2>Our Sample works</h2>
         <div class="samples-grid">
-            <img src="sample1.png" alt="sample projects" height="800px" width="800px">
-            <img src="sample2.jpg" alt="sample image"  height="800px" width="800px">
-            <img src="sample3.jpg" alt="sample image"  height="800px" width="800px">
-            <img src="sample4.jpg" alt="sample image"  height="800px" width="800px">
-            <h1><strong>We can make more just for you!</strong></h1>
+            <img src="sample1.png" alt="sample projects">
+            <img src="sample2.jpg" alt="sample image">
+            <img src="sample3.jpg" alt="sample image">
+            <img src="sample4.jpg" alt="sample image">
+            <h1><strong>We can make more just for </strong></h1>
+            <div id="you">
+                <img src="finger.jpg" alt="you">
+            </div>
         </div>
     </section>
-
+    
     <section class="testimonials" id="testimonials">
         <h2>TESTIMONIALS</h2>
         <div class="slider-container">
@@ -524,11 +560,9 @@
         <p>&reg; Copyright Mera Engineering Agency. All Rights Reserved</p>
         <p>Designed by SHEMA Divin.</p>
     </footer>
-    <!-- Ion Icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    <!-- Testimonial Slider Script -->
     <script>
         const slider = document.querySelector('.slider');
         const dots = document.querySelectorAll('.dot');
@@ -550,7 +584,7 @@
         setInterval(() => {
             currentIndex = (currentIndex + 1) % dots.length;
             showSlide(currentIndex);
-        }, 5000);
+        }, 2500);
 
         // Initialize
         showSlide(0);
